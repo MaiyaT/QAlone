@@ -12,6 +12,14 @@
 
 //@dynamic yh_bgGgradientTo,yh_bgGgradientFrom,yh_bgGgradientFX;
 
+-(instancetype)initWithCoder:(NSCoder *)aDecoder{
+    self = [super initWithCoder:aDecoder];
+    if(self){
+        [self yh_commonInit];
+    }
+    return self;
+}
+
 - (instancetype)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame]) {

@@ -13,6 +13,7 @@
 #import "NSMutableAttributedString+YH.h"
 #import "YHQueryTool.h"
 #import "YHAppDelegate.h"
+#import "YHCollectionViewLayout.h"
 #import "YHBaseObject.h"
 #import "YHBaseCollectionViewCell.h"
 #import "YHBaseTableViewCell.h"

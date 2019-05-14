@@ -70,6 +70,10 @@
 #define AG_TAB_BAR_HEIGHT (IS_INPHONEX_SERIES ? 100.0 : 68.0)
 
 
+#define SCREEN_WIDTH     ([UIScreen mainScreen].bounds.size.width)
+#define SCREEN_HEIGHT    ([UIScreen mainScreen].bounds.size.height)
+
+
 
 #define AdaptedWidth(x)   (roundf(x*MIN([UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)/375.0))
 #define AdaptedHeight(x)   (roundf(x*MIN([UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)/667.0))
@@ -91,7 +95,6 @@
 
 
 #define LS(s)     NSLocalizedString(s, nil)
-#define YXCSStoryBoard      [UIStoryboard storyboardWithName:@"YHMainStoryboard" bundle:nil]
 
 #define  YHNetWorkChangeEventNotification   @"YHNetWorkChangeEventNotification"
 

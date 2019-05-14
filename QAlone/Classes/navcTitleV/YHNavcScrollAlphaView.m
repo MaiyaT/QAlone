@@ -68,14 +68,21 @@
         alpha = 0;
         alphaTitle = 1;
     }
-    [self showWithBgAlpha:alpha titleAlpha:alphaTitle];
+    if(self.isInverse){
+        [self showWithBgAlpha:(0.85-alpha) titleAlpha:(0.85-alphaTitle)];
+    }else{
+        [self showWithBgAlpha:alpha titleAlpha:alphaTitle];
+    }
 }
 
 - (void)showWithBgAlpha:(CGFloat)bg_alpha titleAlpha:(CGFloat)title_alpha{
-    if(self.navcEffectV.alpha != bg_alpha){
-        self.navcEffectV.alpha = bg_alpha;
-    }
+    
     if(!self.titleAlphaNoAdjuest){
+        
+        if(self.navcEffectV.alpha != bg_alpha){
+            self.navcEffectV.alpha = bg_alpha;
+        }
+        
         self.navcTeadTitle.alpha = title_alpha;
     }
     

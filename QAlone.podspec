@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'QAlone'
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
   s.summary          = 'q shell common'
 
 # This description is used to generate tags and improve search results.
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   s.author           = { 'lnn' => '763465697@qq.com' }
   s.source           = { :git => 'https://github.com/MaiyaT/QAlone.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'QAlone/Classes/**/*'
   

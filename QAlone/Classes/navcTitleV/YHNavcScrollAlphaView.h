@@ -16,6 +16,12 @@
 /** 标题保持透明度不变*/
 @property (assign, nonatomic) BOOL titleAlphaNoAdjuest;
 
+
+/**
+ 是反向的
+ */
+@property (assign, nonatomic) BOOL isInverse;
+
 /** 表格滑动 偏移值变化调用*/
 - (void)updateScrollVOffset:(CGFloat)offset;
 
@@ -24,10 +30,12 @@
 /** 更新内容显示*/
 - (void)updateContentShow;
 
+
+- (void)showWithBgAlpha:(CGFloat)bg_alpha titleAlpha:(CGFloat)title_alpha;
+
 //子视图 调用
 -(void)buildScrollviewContentSubviews;
 
-
-- (void)showWithBgAlpha:(CGFloat)bg_alpha titleAlpha:(CGFloat)title_alpha;
+- (void)showSubWithBgAlpha:(CGFloat)bg_alpha titleAlpha:(CGFloat)title_alpha;
 
 @end

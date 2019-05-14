@@ -1,9 +1,9 @@
 {
   "name": "QAlone",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "summary": "q shell common",
   "description": "yh q shell common",
-  "homepage": "https://gitee.com/lnn/QAlone",
+  "homepage": "https://github.com/MaiyaT/QAlone",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,8 +12,8 @@
     "lnn": "763465697@qq.com"
   },
   "source": {
-    "git": "https://gitee.com/lnn/QAlone.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/MaiyaT/QAlone.git",
+    "tag": "0.1.2"
   },
   "platforms": {
     "ios": "8.0"
@@ -21,7 +21,7 @@
   "source_files": "QAlone/Classes/**/*",
   "resource_bundles": {
     "QAlone": [
-      "QAlone/Assets/*"
+      "QAlone/Assets/**/*"
     ]
   },
   "frameworks": [
