@@ -1,0 +1,6 @@
+framework module QAlone {
+  umbrella header "QAlone-umbrella.h"
+
+  export *
+  module * { export * }
+}
