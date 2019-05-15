@@ -14,7 +14,7 @@
 
 -(void)buildScrollviewContentSubviews{
     
-    [self.buttonLeft setImage:QAloneImageByName(@"navi_icon_back_white")] forState:UIControlStateNormal];
+    [self.buttonLeft setImage:QAloneImageByName(@"navi_icon_back_white") forState:UIControlStateNormal];
     self.buttonLeft.backgroundColor = [[UIColor yh_colorByHexString:@"0x212329"] colorWithAlphaComponent:0.5];
     self.buttonLeft.layer.cornerRadius = AdaptedWidth(13);
     self.buttonLeft.layer.masksToBounds = YES;
