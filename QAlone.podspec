@@ -27,13 +27,15 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '9.0'
 
-  s.source_files = 'QAlone/Classes/**/*'
+  s.source_files = 'QAlone/Classes/**/*.{h,m}'
   
-  # s.resources = 'QAlone/Assets/QBundel.bundle'
+  s.resources = 'QAlone/Classes/QBundel.bundle'
+  # 'QAlone/Classes/AXWebViewController.bundle'
   
-  s.resource_bundles = {
-      'QBundel' => ['QAlone/Assets/*']
-  }
+  # s.resource_bundles = {
+  #     'QBundel' => ['QAlone/Classes/*.bundle'],
+  #     #'QBundel' => ['QAlone/Assets/**/*']
+  # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit', 'WebKit', 'Foundation'

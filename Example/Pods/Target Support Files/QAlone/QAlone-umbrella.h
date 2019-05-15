@@ -36,7 +36,6 @@
 #import "YHUserDefaultsSetting.h"
 #import "UIViewController+PicPicker.h"
 #import "YHPicPickerItem.h"
-#import "YHBundleRead.h"
 #import "YHMacro.h"
 #import "YHBaseCustomNavcVController.h"
 #import "YHNavcBackTitleScrollShowView.h"
@@ -48,6 +47,7 @@
 #import "AXSecurityPolicy.h"
 #import "YHAXZhuYeController.h"
 #import "YHLanuchViewController.h"
+#import "YHBundleRead.h"
 
 FOUNDATION_EXPORT double QAloneVersionNumber;
 FOUNDATION_EXPORT const unsigned char QAloneVersionString[];

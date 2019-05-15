@@ -6,9 +6,9 @@
 //  Copyright (c) 2019 lnn. All rights reserved.
 //
 
-#import "YHAppDelegate.h"
+#import "AppDelegate.h"
 
-@implementation YHAppDelegate
+@implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
