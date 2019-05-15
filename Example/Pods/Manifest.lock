@@ -39,7 +39,7 @@ PODS:
     - NJKWebViewProgress/ProgressView (= 0.2.3)
   - NJKWebViewProgress/Core (0.2.3)
   - NJKWebViewProgress/ProgressView (0.2.3)
-  - QAlone (0.1.4):
+  - QAlone (0.1.8):
     - AFNetworking
     - Aspects
     - AVOSCloud
@@ -123,7 +123,7 @@ SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
   NJKWebViewProgress: f481fd424cb5ecc27eacae11b5397db92fba9a4d
-  QAlone: e498b9bc083e73378114b67d6ed204504cec4b9d
+  QAlone: 5202fcbe19dd646a2c91dafe1352202a12fc151e
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
