@@ -45,7 +45,7 @@
     if(formate){
         dateFormater.dateFormat = formate;
     }else{
-        dateFormater.dateFormat = LS(@"yyyy年MM月dd日 HH时mm分ss秒");
+        dateFormater.dateFormat = QAloneImageByName(@"yyyy年MM月dd日 HH时mm分ss秒");
     }
     return [dateFormater stringFromDate:self];
 }
@@ -55,11 +55,11 @@
  */
 - (NSString *)yh_desYMDW{
     NSMutableString * str = [[NSMutableString alloc] init];
-    [str appendFormat:LS(@"%ld年"),self.year];
-    [str appendFormat:LS(@"%ld月"),self.month];
-    [str appendFormat:LS(@"%ld日 "),self.day];
-    NSArray * listWeeak = @[LS(@"天"),LS(@"一"),LS(@"二"),LS(@"三"),LS(@"四"),LS(@"五"),LS(@"六")];
-    [str appendFormat:LS(@"星期%@"),listWeeak[self.weekday-1]];
+    [str appendFormat:QAloneImageByName(@"%ld年"),self.year];
+    [str appendFormat:QAloneImageByName(@"%ld月"),self.month];
+    [str appendFormat:QAloneImageByName(@"%ld日 "),self.day];
+    NSArray * listWeeak = @[QAloneImageByName(@"天"),QAloneImageByName(@"一"),QAloneImageByName(@"二"),QAloneImageByName(@"三"),QAloneImageByName(@"四"),QAloneImageByName(@"五"),QAloneImageByName(@"六")];
+    [str appendFormat:QAloneImageByName(@"星期%@"),listWeeak[self.weekday-1]];
     return str;
 }
 
@@ -77,37 +77,37 @@
     switch (weekday) {
         case 1:
         {
-            return LS(@"星期天");
+            return QAloneImageByName(@"星期天");
         }
             break;
         case 2:
         {
-            return LS(@"星期一");
+            return QAloneImageByName(@"星期一");
         }
             break;
         case 3:
         {
-            return LS(@"星期二");
+            return QAloneImageByName(@"星期二");
         }
             break;
         case 4:
         {
-            return LS(@"星期三");
+            return QAloneImageByName(@"星期三");
         }
             break;
         case 5:
         {
-            return LS(@"星期四");
+            return QAloneImageByName(@"星期四");
         }
             break;
         case 6:
         {
-            return LS(@"星期五");
+            return QAloneImageByName(@"星期五");
         }
             break;
         case 7:
         {
-            return LS(@"星期六");
+            return QAloneImageByName(@"星期六");
         }
             break;
             

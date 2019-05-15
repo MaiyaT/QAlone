@@ -36,6 +36,7 @@
 #import "YHUserDefaultsSetting.h"
 #import "UIViewController+PicPicker.h"
 #import "YHPicPickerItem.h"
+#import "YHBundleRead.h"
 #import "YHMacro.h"
 #import "YHBaseCustomNavcVController.h"
 #import "YHNavcBackTitleScrollShowView.h"

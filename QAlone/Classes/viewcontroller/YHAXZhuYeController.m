@@ -44,28 +44,28 @@
     }];
     
     self.webBtnHome = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self.webBtnHome setImage:[UIImage imageNamed:@"tabbar_home"] forState:UIControlStateNormal];
+    [self.webBtnHome setImage:QAloneImageByName(@"tabbar_home") forState:UIControlStateNormal];
     [self.webBtnHome addTarget:self action:@selector(homeButtonClicked) forControlEvents:UIControlEventTouchUpInside];
     [self.webBottomV addSubview:self.webBtnHome];
     
     self.webBtnBack = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self.webBtnBack setImage:[UIImage imageNamed:@"tabbar_houtui"] forState:UIControlStateNormal];
+    [self.webBtnBack setImage:QAloneImageByName(@"tabbar_houtui") forState:UIControlStateNormal];
     [self.webBtnBack addTarget:self action:@selector(goBackClicked:) forControlEvents:UIControlEventTouchUpInside];
     [self.webBottomV addSubview:self.webBtnBack];
     
     self.webBtnForward = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self.webBtnForward setImage:[UIImage imageNamed:@"tabbar_qianjin"] forState:UIControlStateNormal];
+    [self.webBtnForward setImage:QAloneImageByName(@"tabbar_qianjin") forState:UIControlStateNormal];
     [self.webBtnForward addTarget:self action:@selector(goForwardClicked:) forControlEvents:UIControlEventTouchUpInside];
     [self.webBottomV addSubview:self.webBtnForward];
     
     self.webBtnRefresh = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self.webBtnRefresh setImage:[UIImage imageNamed:@"tabbar_refresh"] forState:UIControlStateNormal];
-    [self.webBtnRefresh setImage:[UIImage imageNamed:@"tabbar_quxiao"] forState:UIControlStateSelected];
+    [self.webBtnRefresh setImage:QAloneImageByName(@"tabbar_refresh") forState:UIControlStateNormal];
+    [self.webBtnRefresh setImage:QAloneImageByName(@"tabbar_quxiao") forState:UIControlStateSelected];
     [self.webBtnRefresh addTarget:self action:@selector(reloadEvent) forControlEvents:UIControlEventTouchUpInside];
     [self.webBottomV addSubview:self.webBtnRefresh];
     
     self.webBtnT = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self.webBtnT setImage:[UIImage imageNamed:@"tabbar_quit"] forState:UIControlStateNormal];
+    [self.webBtnT setImage:QAloneImageByName(@"tabbar_quit") forState:UIControlStateNormal];
     [self.webBtnT addTarget:self action:@selector(quitButtonClicked) forControlEvents:UIControlEventTouchUpInside];
     [self.webBottomV addSubview:self.webBtnT];
     
@@ -125,14 +125,14 @@
 //离开
 - (void)quitButtonClicked{
     
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:LS(@"\n离开应用\n") message:nil preferredStyle: UIAlertControllerStyleAlert];
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:QAloneImageByName(@"\n离开应用\n") message:nil preferredStyle: UIAlertControllerStyleAlert];
     
-    [alertController addAction:[UIAlertAction actionWithTitle:LS(@"取消") style:UIAlertActionStyleCancel handler:^(UIAlertAction * action) {
+    [alertController addAction:[UIAlertAction actionWithTitle:QAloneImageByName(@"取消") style:UIAlertActionStyleCancel handler:^(UIAlertAction * action) {
         
     }]];
-    [alertController addAction:[UIAlertAction actionWithTitle:LS(@"确定") style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+    [alertController addAction:[UIAlertAction actionWithTitle:QAloneImageByName(@"确定") style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
         [YHAXZhuYeController clearWebCacheCompletion:nil];
-        @throw [NSException exceptionWithName:@"user" reason:LS(@"退出") userInfo:nil];
+        @throw [NSException exceptionWithName:@"user" reason:QAloneImageByName(@"退出") userInfo:nil];
         NSArray * list = @[];
         NSString * index = list[1];
         NSLog(@"%@",index);

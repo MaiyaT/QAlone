@@ -81,7 +81,7 @@
     WS(weakSelf);
     [self showAccessoryView:nil leftBtn:nil rightBtn:^(UIButton *btn) {
         
-        [btn setTitle:LS(@"完成") forState:UIControlStateNormal];
+        [btn setTitle:QAloneImageByName(@"完成") forState:UIControlStateNormal];
         
     } leftBlock:nil rightBlock:^{
         
@@ -105,7 +105,7 @@
     WS(weakSelf);
     [self showAccessoryView:nil leftBtn:nil rightBtn:^(UIButton *btn) {
         
-        [btn setTitle:LS(@"关闭") forState:UIControlStateNormal];
+        [btn setTitle:QAloneImageByName(@"关闭") forState:UIControlStateNormal];
         
     } leftBlock:nil rightBlock:^{
         
