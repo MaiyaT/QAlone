@@ -39,7 +39,7 @@ PODS:
     - NJKWebViewProgress/ProgressView (= 0.2.3)
   - NJKWebViewProgress/Core (0.2.3)
   - NJKWebViewProgress/ProgressView (0.2.3)
-  - QAlone (0.1.2):
+  - QAlone (0.1.4):
     - AFNetworking
     - Aspects
     - AVOSCloud
@@ -123,7 +123,7 @@ SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
   NJKWebViewProgress: f481fd424cb5ecc27eacae11b5397db92fba9a4d
-  QAlone: 23e034c538daa581a83059a72780f0f400a99db3
+  QAlone: e498b9bc083e73378114b67d6ed204504cec4b9d
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
@@ -131,6 +131,6 @@ SPEC CHECKSUMS:
   "UITableView+FDTemplateLayoutCell": 5c949b4a5059c404b442926c0e80f81d10a2d66f
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: b3f62066bcb0ee31c8e1b22f26b8d3f46231af67
+PODFILE CHECKSUM: 3901c906b522c5b67097ee1dcd070d06cdc5d654
 
 COCOAPODS: 1.6.1

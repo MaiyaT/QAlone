@@ -1,6 +1,6 @@
 {
   "name": "QAlone",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "summary": "q shell common",
   "description": "yh q shell common",
   "homepage": "https://github.com/MaiyaT/QAlone",
@@ -13,15 +13,21 @@
   },
   "source": {
     "git": "https://github.com/MaiyaT/QAlone.git",
-    "tag": "0.1.2"
+    "tag": "0.1.4"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
   "source_files": "QAlone/Classes/**/*",
   "resource_bundles": {
-    "QAlone": [
-      "QAlone/Assets/**/*"
+    "QBundle": [
+      "QAlone/Assets/*.bundle"
+    ],
+    "QPng": [
+      "QAlone/Assets/*.png"
+    ],
+    "QAssets": [
+      "QAlone/Assets/*.xcassets"
     ]
   },
   "frameworks": [
