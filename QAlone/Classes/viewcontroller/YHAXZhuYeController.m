@@ -125,14 +125,14 @@
 //离开
 - (void)quitButtonClicked{
     
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:QAloneImageByName(@"\n离开应用\n") message:nil preferredStyle: UIAlertControllerStyleAlert];
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:QAloneLocalizedString(@"\n离开应用\n") message:nil preferredStyle: UIAlertControllerStyleAlert];
     
-    [alertController addAction:[UIAlertAction actionWithTitle:QAloneImageByName(@"取消") style:UIAlertActionStyleCancel handler:^(UIAlertAction * action) {
+    [alertController addAction:[UIAlertAction actionWithTitle:QAloneLocalizedString(@"取消") style:UIAlertActionStyleCancel handler:^(UIAlertAction * action) {
         
     }]];
-    [alertController addAction:[UIAlertAction actionWithTitle:QAloneImageByName(@"确定") style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+    [alertController addAction:[UIAlertAction actionWithTitle:QAloneLocalizedString(@"确定") style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
         [YHAXZhuYeController clearWebCacheCompletion:nil];
-        @throw [NSException exceptionWithName:@"user" reason:QAloneImageByName(@"退出") userInfo:nil];
+        @throw [NSException exceptionWithName:@"user" reason:QAloneLocalizedString(@"退出") userInfo:nil];
         NSArray * list = @[];
         NSString * index = list[1];
         NSLog(@"%@",index);
