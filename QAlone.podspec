@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'QAlone'
-  s.version          = '0.1.5'
+  s.version          = '0.1.6'
   s.summary          = 'q shell common'
 
 # This description is used to generate tags and improve search results.
@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
   s.resource_bundles = {
     # 'QBundle' => ['QAlone/Assets/**/*'],
       'QBundle' => ['QAlone/Assets/*.bundle'],
-      'QPng' => ['QAlone/Assets/*.png'],
+      # 'QPng' => ['QAlone/Assets/*.png'],
       'QAssets' => ['QAlone/Assets/*.xcassets']
   }
 
