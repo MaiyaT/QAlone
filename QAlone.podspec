@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'QAlone'
-  s.version          = '0.2.1'
+  s.version          = '0.2.2'
   s.summary          = 'q shell common'
 
 # This description is used to generate tags and improve search results.
@@ -38,7 +38,7 @@ Pod::Spec.new do |s|
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit', 'WebKit', 'Foundation'
   
-  s.prefix_header_contents = '#import "QAlone.h"','#import "YHBundleRead.h"'
+  s.prefix_header_contents = '#import "QAlone.h"'
   
   s.dependency 'AFNetworking', '~> 2.3'
   s.dependency 'GVUserDefaults'
