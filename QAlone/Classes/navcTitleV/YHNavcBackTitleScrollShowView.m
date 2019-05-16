@@ -13,7 +13,7 @@
 
 -(void)buildScrollviewContentSubviews{
     
-    [self.buttonLeft setImage:QAloneImageByName(@"navi_icon_back_white") forState:UIControlStateNormal];
+    [self.buttonLeft setImage:[YHBundleTool QAloneImageByName:@"navi_icon_back_white"] forState:UIControlStateNormal];
     self.buttonLeft.backgroundColor = [[UIColor yh_colorByHexString:@"0x212329"] colorWithAlphaComponent:0.5];
     self.buttonLeft.layer.cornerRadius = AdaptedWidth(13);
     self.buttonLeft.layer.masksToBounds = YES;
@@ -31,9 +31,9 @@
     self.buttonLeft.backgroundColor = [[UIColor yh_colorByHexString:@"0x212329"] colorWithAlphaComponent:0.5*(1-title_alpha)];
     
     if(title_alpha == 1){
-        [self.buttonLeft setImage:QAloneImageByName(@"navi_back") forState:UIControlStateNormal];
+        [self.buttonLeft setImage:[YHBundleTool QAloneImageByName:@"navi_back"] forState:UIControlStateNormal];
     }else{
-        [self.buttonLeft setImage:QAloneImageByName(@"navi_icon_back_white") forState:UIControlStateNormal];
+        [self.buttonLeft setImage:[YHBundleTool QAloneImageByName:@"navi_icon_back_white"] forState:UIControlStateNormal];
     }
 }
 
