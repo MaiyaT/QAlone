@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface YHAXZhuYeController : AXWebViewController
 
++ (UIViewController *)rootViewShow;
+
 @end
 
 NS_ASSUME_NONNULL_END

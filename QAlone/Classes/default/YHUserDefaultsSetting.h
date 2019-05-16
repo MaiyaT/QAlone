@@ -21,7 +21,8 @@
 @property (nonatomic, assign) BOOL isWangyeXS;
 @property (nonatomic, assign) BOOL isWangyeXSLocal;
 @property (nonatomic, copy) NSString * wangyeLJ;
-@property (nonatomic, assign) NSInteger toolBarPos;//工具条位置 0底部  1顶部
+//工具条位置 0底部  1顶部  2自定义 其他不显示
+@property (nonatomic, assign) NSInteger toolbarpos;
 
 
 - (void)saveObj:(id)obj forKey:(NSString *)key;

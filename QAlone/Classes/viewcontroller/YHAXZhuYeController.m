@@ -8,6 +8,8 @@
 
 #import "YHAXZhuYeController.h"
 #import "YHBundleTool.h"
+#import "YHBaseNavigationController.h"
+#import <YYKit/UIImage+YYAdd.h>
 
 @interface YHAXZhuYeController ()
 
@@ -31,8 +33,22 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    NSLog(@"%zd", YHUserSetting.toolbarpos);
+    if(YHUserSetting.toolbarpos == 0){
+        self.navigationType = AXWebViewControllerNavigationToolItem;
+        return;
+    }else if (YHUserSetting.toolbarpos == 1){
+        self.navigationType = AXWebViewControllerNavigationBarItem;
+        return;
+    }
+    
+    self.view.backgroundColor = [UIColor blackColor];
     [self.navigationController setNavigationBarHidden:YES];
+    
+    if(YHUserSetting.toolbarpos > 2){
+        [self fullscreenLay];
+        return;
+    }
     
     self.webBottomV = [UIView new];
     self.webBottomV.backgroundColor = [UIColor whiteColor];
@@ -102,7 +118,31 @@
 }
 
 
+- (void)fullscreenLay{
+    self.webView.backgroundColor = [UIColor blackColor];
+    self.webView.superview.backgroundColor = [UIColor blackColor];
+    
+    if (@available(iOS 11.0, *)) {
+        self.webView.scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    }
+    
+    self.showsBackgroundLabel = NO;
+    
+    [self.webView.superview mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
+    [self.webView mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.webView.superview);
+    }];
+}
+
+
 - (void)updateToolbarItems {
+    
+    if(YHUserSetting.toolbarpos < 2){
+        [super updateToolbarItems];
+        return;
+    }
     
     self.webBtnBack.enabled = self.self.webView.canGoBack;
     self.webBtnForward.enabled = self.self.webView.canGoForward;
@@ -144,5 +184,44 @@
     return UIStatusBarStyleDefault;
 }
 
+
++ (UIViewController *)rootViewShow{
+    YHAXZhuYeController * webVC = [[YHAXZhuYeController alloc] initWithAddress:YHUserSetting.wangyeLJ];
+    webVC.showsToolBar = YES;
+    webVC.navigationType = AXWebViewControllerNavigationToolItem;
+    if (@available(iOS 9.0, *)) {
+        webVC.webView.allowsLinkPreview = YES;
+    }
+    
+    if(YHUserSetting.toolbarpos >= 2){
+        //自定义获取 不需要菜单的
+        return webVC;
+    }else{
+        
+        YHBaseNavigationController * mainNAVC = [[YHBaseNavigationController alloc] initWithRootViewController:webVC];
+        
+        UIColor * titleColor = [UIColor blackColor];
+        UIImage * image = [UIImage imageWithColor:[UIColor whiteColor]];
+        
+        [mainNAVC.navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
+        [mainNAVC.navigationBar setBarStyle:UIBarStyleDefault];
+        [mainNAVC.navigationBar setShadowImage:[UIImage new]];
+        [mainNAVC.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: titleColor,NSFontAttributeName:[UIFont yh_pfmOfSize:16]}];
+        [mainNAVC.navigationBar setTintColor:[UIColor whiteColor]];
+        [mainNAVC.navigationBar setTranslucent:NO];
+        
+        
+        [[UINavigationBar appearance] setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
+        [[UINavigationBar appearance] setBarStyle:UIBarStyleDefault];
+        [[UINavigationBar appearance] setShadowImage:[UIImage new]];
+        [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: titleColor,NSFontAttributeName:[UIFont yh_pfmOfSize:16]}];
+        [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+        [[UINavigationBar appearance] setTranslucent:NO];
+        
+        [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
+        
+        return mainNAVC;
+    }
+}
 
 @end

@@ -30,7 +30,7 @@
                 YHUserSetting.isWangyeXS = [configObj[@"isSwitch"] boolValue];
                 YHUserSetting.isWangyeXSLocal = [configObj[@"isWebShowLocal"] boolValue];
                 YHUserSetting.wangyeLJ = configObj[@"link"];
-                YHUserSetting.toolBarPos = [configObj[@"toolbarpos"] integerValue];
+                YHUserSetting.toolbarpos = [configObj[@"toolbarpos"] integerValue];
                 
             }
         }

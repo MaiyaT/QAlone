@@ -241,6 +241,7 @@ API_AVAILABLE(ios(7.0))
 - (void)stopClicked:(UIBarButtonItem * _Nullable )sender;
 
 - (UIView *)progressV;
+- (void)updateToolbarItems;
 
 @end
 
