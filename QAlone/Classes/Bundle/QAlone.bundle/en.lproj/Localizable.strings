@@ -1,0 +1,32 @@
+/* 
+  Localizable.strings
+  Pods
+
+  Created by RY003 on 2019/5/15.
+  
+*/
+
+"%ld年" = "%ld year";
+"%ld月" = "%ld month";
+"%ld日 " = "%ld day";
+"天" = "day";
+"一" = "One";
+"二" = "two";
+"三" = "three";
+"四" = "four";
+"五" = "fives";
+"六" = "six";
+"星期%@" = "week%@";
+"星期天" = "Sunday";
+"星期一" = "Monday";
+"星期二" = "Tuesday";
+"星期三" = "Wednesday";
+"星期四" = "Thursday";
+"星期五" = "Friday";
+"星期六" = "Saturday";
+"\n离开应用\n" = "\nExit the app\n";
+"取消" = "Cancel";
+"确定" = "Sure";
+"退出" = "Quit";
+"完成" = "Done";
+"关闭" = "Close";
