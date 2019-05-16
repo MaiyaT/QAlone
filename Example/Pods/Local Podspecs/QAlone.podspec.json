@@ -20,7 +20,7 @@
   },
   "source_files": "QAlone/Classes/**/*.{h,m}",
   "resources": [
-    "QAlone/Classes/QBundel.bundle",
+    "QAlone/Classes/QAlone.bundle",
     "QAlone/Classes/AXWebViewController.bundle"
   ],
   "frameworks": [

@@ -20,17 +20,20 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    NSBundle * bundle = [NSBundle bundleForClass:[YHBundleRead class]];
-    
-    NSURL *url = [bundle URLForResource:@"AXWebViewController" withExtension:@"bundle"];
-    bundle = [NSBundle bundleWithURL:url];
+//    NSBundle * bundle = [NSBundle bundleForClass:[YHBundleRead class]];
+//    
+//    NSURL *url = [bundle URLForResource:@"QAlone" withExtension:@"bundle"];
+//    bundle = [NSBundle bundleWithURL:url];
 
     
 //    NSString * path = [bundle pathForResource:@"QAlone" ofType:@"bundle"];
 //    bundle = [NSBundle bundleWithPath:path];
     
-    UIImage * image = [UIImage imageNamed:@"navi_icon_back_white" inBundle:bundle compatibleWithTraitCollection:nil];
+    UIImage * image = QAloneImageByName(@"navi_icon_back_white");
     NSLog(@"%@",image);
+    
+    NSString * queding = QAloneLocalizedString(@"确定");
+    NSLog(@"%@",queding);
 }
 
 - (void)didReceiveMemoryWarning
