@@ -7,7 +7,7 @@
 //
 
 #import "YHNavcBackTitleScrollShowView.h"
-
+#import "YHBundleTool.h"
 
 @implementation YHNavcBackTitleScrollShowView
 

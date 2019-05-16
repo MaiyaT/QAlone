@@ -10,7 +10,6 @@
 
 
 #import "YHMacro.h"
-#import "YHBundleTool.h"
 #import "UIColor+YH.h"
 #import "UIFont+YH.h"
 #import "YHUserDefaultsSetting.h"

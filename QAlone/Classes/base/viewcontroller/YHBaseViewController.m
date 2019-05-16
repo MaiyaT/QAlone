@@ -131,13 +131,13 @@
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     
-    NSLog(QAloneLocalizedString(@"#########________释放视图%@_________#########"),NSStringFromClass([self class]));
+    NSLog(@"#########________释放视图%@_________#########",NSStringFromClass([self class]));
 }
 
 
 - (void)didReceiveMemoryWarning {
     
-    NSLog(QAloneLocalizedString(@"收到内存警告%@"),NSStringFromClass([self class]));
+    NSLog(@"收到内存警告%@",NSStringFromClass([self class]));
     
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

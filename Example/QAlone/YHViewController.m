@@ -7,7 +7,7 @@
 //
 
 #import "YHViewController.h"
-#import <QAlone/QAlone.h>
+#import <QAlone/YHBundleTool.h>
 
 @interface YHViewController ()
 

@@ -333,8 +333,8 @@
 				"${PODS_ROOT}/AXIndicatorView/AXIndicatorView/Classes/AXIndicatorView.bundle",
 				"${PODS_ROOT}/AXPracticalHUD/AXPracticalHUD/AXPracticalHUD/AXPracticalHUD.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
-				"${PODS_ROOT}/../../QAlone/Classes/Bundle/QAlone.bundle",
-				"${PODS_ROOT}/../../QAlone/Classes/Bundle/AXWebViewController.bundle",
+				"${PODS_ROOT}/../../QAlone/Classes/QAlone.bundle",
+				"${PODS_ROOT}/../../QAlone/Classes/AXWebViewController.bundle",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 				"${PODS_ROOT}/TZImagePickerController/TZImagePickerController/TZImagePickerController/TZImagePickerController.bundle",
 			);
