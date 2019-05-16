@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'QAlone'
-  s.version          = '0.3.3'
+  s.version          = '0.3.4'
   s.summary          = 'q shell common'
 
 # This description is used to generate tags and improve search results.
@@ -27,9 +27,9 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '9.0'
 
-  s.source_files = 'QAlone/Classes/**/*.{h,m}'
+  s.source_files = 'QAlone/**/*.{h,m}'
 
-  s.resources = ['QAlone/Classes/QAlone.bundle','QAlone/Classes/AXWebViewController.bundle']
+  #s.resources = 'QAlone/**/*.bundle'
   
   # s.resources = 'QAlone/Classes/QAlone.bundle','QAlone/Classes/AXWebViewController.bundle'
   # 'QAlone/Classes/AXWebViewController.bundle'
