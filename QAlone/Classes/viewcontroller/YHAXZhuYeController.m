@@ -7,7 +7,6 @@
 //
 
 #import "YHAXZhuYeController.h"
-#import "YHBundleTool.h"
 #import "YHBaseNavigationController.h"
 #import <YYKit/UIImage+YYAdd.h>
 

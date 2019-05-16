@@ -1,6 +1,6 @@
 {
   "name": "QAlone",
-  "version": "0.3.3",
+  "version": "0.3.5",
   "summary": "q shell common",
   "description": "yh q shell common",
   "homepage": "https://github.com/MaiyaT/QAlone",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/MaiyaT/QAlone.git",
-    "tag": "0.3.3"
+    "tag": "0.3.5"
   },
   "platforms": {
     "ios": "9.0"
@@ -24,7 +24,10 @@
     "WebKit",
     "Foundation"
   ],
-  "prefix_header_contents": "#import \"QAlone.h\"",
+  "prefix_header_contents": [
+    "#import \"QAlone.h\"",
+    "#import \"YHBundleTool.h\""
+  ],
   "dependencies": {
     "AFNetworking": [
 

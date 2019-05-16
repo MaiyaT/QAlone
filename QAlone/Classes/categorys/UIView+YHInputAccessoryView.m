@@ -9,7 +9,6 @@
 #import "UIView+YHInputAccessoryView.h"
 #import "UIColor+YH.h"
 #import "UIButton+JKBlock.h"
-#import "YHBundleTool.h"
 
 @implementation UIView (YHInputAccessoryView)
 
