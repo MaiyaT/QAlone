@@ -5,6 +5,10 @@
 //  Created by 林宁宁 on 2019/5/13.
 //
 
+#ifndef QAlone_h
+#define QAlone_h
+
+
 #import "YHMacro.h"
 #import "YHBundleRead.h"
 #import "UIColor+YH.h"
@@ -15,8 +19,5 @@
 
 #import <Foundation/Foundation.h>
 
-@interface QAlone : NSObject
 
-
-
-@end
+#endif /* QAlone_h */
