@@ -20,7 +20,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-//    NSBundle * bundle = [NSBundle bundleForClass:[YHBundleRead class]];
+//    NSBundle * bundle = [NSBundle bundleForClass:[YHBundleTool class]];
 //    
 //    NSURL *url = [bundle URLForResource:@"QAlone" withExtension:@"bundle"];
 //    bundle = [NSBundle bundleWithURL:url];
