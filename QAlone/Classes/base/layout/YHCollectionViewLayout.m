@@ -102,14 +102,25 @@
     //假设最短的那一列为第0列
     __block NSString *minColumn = @"0";
     
-    //遍历字典,找出最短的那一列
-    [self.maxYDic enumerateKeysAndObjectsUsingBlock:^(NSString *column, NSNumber *maxY, BOOL *stop) {
-        
-        if ([maxY floatValue] < [self.maxYDic[minColumn] floatValue])
-        {
-            minColumn = column;
-        }
-    }];
+    if(indexPath.row == 0){
+        //是一个新的section 找出最长的
+        [self.maxYDic enumerateKeysAndObjectsUsingBlock:^(NSString *column, NSNumber *maxY, BOOL *stop) {
+            
+            if ([maxY floatValue] > [self.maxYDic[minColumn] floatValue])
+            {
+                minColumn = column;
+            }
+        }];
+    }else{
+        //遍历字典,找出最短的那一列
+        [self.maxYDic enumerateKeysAndObjectsUsingBlock:^(NSString *column, NSNumber *maxY, BOOL *stop) {
+            
+            if ([maxY floatValue] < [self.maxYDic[minColumn] floatValue])
+            {
+                minColumn = column;
+            }
+        }];
+    }
     
     //计算每一个item的宽度和高度
     CGFloat width = (self.collectionView.frame.size.width - self.columnMargin*(self.columnCount - 1) - self.sectionInset.left - self.sectionInset.right) / self.columnCount;

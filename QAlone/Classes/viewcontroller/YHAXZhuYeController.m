@@ -206,7 +206,7 @@
         [mainNAVC.navigationBar setBarStyle:UIBarStyleDefault];
         [mainNAVC.navigationBar setShadowImage:[UIImage new]];
         [mainNAVC.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: titleColor,NSFontAttributeName:[UIFont yh_pfmOfSize:16]}];
-        [mainNAVC.navigationBar setTintColor:[UIColor whiteColor]];
+        [mainNAVC.navigationBar setTintColor:[UIColor blackColor]];
         [mainNAVC.navigationBar setTranslucent:NO];
         
         
@@ -214,7 +214,7 @@
         [[UINavigationBar appearance] setBarStyle:UIBarStyleDefault];
         [[UINavigationBar appearance] setShadowImage:[UIImage new]];
         [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: titleColor,NSFontAttributeName:[UIFont yh_pfmOfSize:16]}];
-        [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+        [[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
         [[UINavigationBar appearance] setTranslucent:NO];
         
         [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;

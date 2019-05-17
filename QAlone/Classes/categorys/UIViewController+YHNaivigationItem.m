@@ -8,6 +8,7 @@
 
 #import "UIViewController+YHNaivigationItem.h"
 #import "UIFont+YH.h"
+#import "YHBundleTool.h"
 
 @implementation UIViewController (YHNaivigationItem)
 
@@ -22,6 +23,13 @@
     UIImage * imageNormal = [UIImage imageNamed:imgPath];
     UIImage * imageSelect = [UIImage imageNamed:imgPathSelect];
 
+    if(!imageNormal){
+        imageNormal = [YHBundleTool QAloneImageByName:imgPath];
+    }
+    if(!imageSelect){
+        imageSelect = [YHBundleTool QAloneImageByName:imgPathSelect];
+    }
+    
     UIButton *leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
     leftButton.titleLabel.font = [UIFont yh_systemFont:14];
     [leftButton setImage:imageNormal forState:UIControlStateNormal];
@@ -83,6 +91,13 @@
     UIImage * imageNormal = [UIImage imageNamed:imgPath];
     UIImage * imageSelect = [UIImage imageNamed:imgPathSelect];
 
+    if(!imageNormal){
+        imageNormal = [YHBundleTool QAloneImageByName:imgPath];
+    }
+    if(!imageSelect){
+        imageSelect = [YHBundleTool QAloneImageByName:imgPathSelect];
+    }
+    
     UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
     rightButton.titleLabel.font = [UIFont yh_systemFont:14];
     [rightButton setImage:imageNormal forState:UIControlStateNormal];

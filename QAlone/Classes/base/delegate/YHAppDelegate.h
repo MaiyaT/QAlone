@@ -28,6 +28,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (retain, nonatomic) NSDate * enterBackgroundDate;
 
+/*
+ 当前的网络状态
+ */
+@property(nonatomic,assign) NSInteger yh_netWorkStatesCode;
+
 @end
 
 NS_ASSUME_NONNULL_END

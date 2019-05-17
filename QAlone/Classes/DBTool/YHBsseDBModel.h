@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface YHBsseDBModel : NSObject
 
+@property (assign, nonatomic) NSInteger itemID;
+
 @end
 
 //这个NSOBJECT的扩展类 可以查看详细的建表sql语句
