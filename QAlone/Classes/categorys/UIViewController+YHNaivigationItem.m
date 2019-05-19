@@ -33,7 +33,7 @@
     UIButton *leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
     leftButton.titleLabel.font = [UIFont yh_systemFont:14];
     [leftButton setImage:imageNormal forState:UIControlStateNormal];
-    [leftButton setImage:imageSelect forState:UIControlStateHighlighted];
+    [leftButton setImage:imageSelect forState:UIControlStateSelected];
     
     leftButton.imageView.contentMode = UIViewContentModeScaleAspectFit;
     
@@ -101,7 +101,7 @@
     UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
     rightButton.titleLabel.font = [UIFont yh_systemFont:14];
     [rightButton setImage:imageNormal forState:UIControlStateNormal];
-    [rightButton setImage:imageSelect forState:UIControlStateHighlighted];
+    [rightButton setImage:imageSelect forState:UIControlStateSelected];
     
     rightButton.imageView.contentMode = UIViewContentModeScaleAspectFit;
     

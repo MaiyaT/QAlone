@@ -1,6 +1,6 @@
 {
   "name": "QAlone",
-  "version": "0.3.5",
+  "version": "0.4.2",
   "summary": "q shell common",
   "description": "yh q shell common",
   "homepage": "https://github.com/MaiyaT/QAlone",
@@ -13,12 +13,20 @@
   },
   "source": {
     "git": "https://github.com/MaiyaT/QAlone.git",
-    "tag": "0.3.5"
+    "tag": "0.4.2"
   },
   "platforms": {
     "ios": "9.0"
   },
   "source_files": "QAlone/**/*.{h,m}",
+  "resource_bundles": {
+    "QAlone": [
+      "QAlone/Classes/Bundle/QAlone.bundle"
+    ],
+    "AXWebViewController": [
+      "QAlone/Classes/viewcontroller/AXWebViewController/AXWebViewController.bundle"
+    ]
+  },
   "frameworks": [
     "UIKit",
     "WebKit",
