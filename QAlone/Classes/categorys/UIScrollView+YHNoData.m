@@ -124,7 +124,7 @@
 
 
 //已经加载显示过 第一次
-@property (assign, nonatomic) BOOL isLoadShow;
+//@property (assign, nonatomic) BOOL isLoadShow;
 
 @end
 
@@ -202,10 +202,10 @@
     if(self.shouldShowEmpty){
         return [self.shouldShowEmpty boolValue];
     }
-    if(!self.isLoadShow){
-        self.isLoadShow = YES;
-        return NO;
-    }
+//    if(!self.isLoadShow){
+//        self.isLoadShow = YES;
+//        return NO;
+//    }
     if(CGSizeEqualToSize(scrollView.contentSize, CGSizeZero)){
         return NO;
     }
