@@ -197,6 +197,13 @@
     }
 }
 
+-(BOOL)emptyDataSetShouldBeForcedToDisplay:(UIScrollView *)scrollView{
+    if(self.shouldShowEmpty){
+        return [self.shouldShowEmpty boolValue];
+    }
+    return NO;
+}
+
 - (BOOL)emptyDataSetShouldDisplay:(UIScrollView *)scrollView
 {
     if(self.shouldShowEmpty){

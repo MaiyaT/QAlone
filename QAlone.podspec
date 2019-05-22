@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'QAlone'
-  s.version          = '0.4.5'
+  s.version          = '0.4.6'
   s.summary          = 'q shell common'
 
 # This description is used to generate tags and improve search results.
@@ -70,4 +70,7 @@ Pod::Spec.new do |s|
   s.dependency 'AXNavigationBackItemInjection'
   s.dependency 'NJKWebViewProgress'
   s.dependency 'Aspects'
+  
+  s.dependency 'Google-Mobile-Ads-SDK'
+  
 end

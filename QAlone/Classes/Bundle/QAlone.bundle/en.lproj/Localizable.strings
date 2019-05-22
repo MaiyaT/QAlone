@@ -31,3 +31,6 @@
 "完成" = "Done";
 "关闭" = "Close";
 "暂时还没有数据哦~" = "No Data";
+"\n需要观看视频才能继续使用\n\n" = "\nNeed to watch the video to continue using \n\n";
+"观看" = "Watch";
+"加载失败,请重试" = "Loading failed, please try again";

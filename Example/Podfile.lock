@@ -26,6 +26,30 @@ PODS:
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
+  - Google-Mobile-Ads-SDK (7.44.0):
+    - GoogleAppMeasurement (~> 6.0)
+  - GoogleAppMeasurement (6.0.0):
+    - GoogleUtilities/AppDelegateSwizzler (~> 6.0)
+    - GoogleUtilities/MethodSwizzler (~> 6.0)
+    - GoogleUtilities/Network (~> 6.0)
+    - "GoogleUtilities/NSData+zlib (~> 6.0)"
+    - nanopb (~> 0.3)
+  - GoogleUtilities/AppDelegateSwizzler (6.1.0):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Network
+  - GoogleUtilities/Environment (6.1.0)
+  - GoogleUtilities/Logger (6.1.0):
+    - GoogleUtilities/Environment
+  - GoogleUtilities/MethodSwizzler (6.1.0):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/Network (6.1.0):
+    - GoogleUtilities/Logger
+    - "GoogleUtilities/NSData+zlib"
+    - GoogleUtilities/Reachability
+  - "GoogleUtilities/NSData+zlib (6.1.0)"
+  - GoogleUtilities/Reachability (6.1.0):
+    - GoogleUtilities/Logger
   - GVUserDefaults (1.0.2)
   - KVOController (1.2.0)
   - LKDBHelper (2.5.1):
@@ -34,12 +58,17 @@ PODS:
     - FMDB
   - Masonry (1.1.0)
   - MJRefresh (3.2.0)
+  - nanopb (0.3.901):
+    - nanopb/decode (= 0.3.901)
+    - nanopb/encode (= 0.3.901)
+  - nanopb/decode (0.3.901)
+  - nanopb/encode (0.3.901)
   - NJKWebViewProgress (0.2.3):
     - NJKWebViewProgress/Core (= 0.2.3)
     - NJKWebViewProgress/ProgressView (= 0.2.3)
   - NJKWebViewProgress/Core (0.2.3)
   - NJKWebViewProgress/ProgressView (0.2.3)
-  - QAlone (0.4.2):
+  - QAlone (0.4.5):
     - AFNetworking
     - Aspects
     - AVOSCloud
@@ -47,6 +76,7 @@ PODS:
     - AXPracticalHUD
     - DZNEmptyDataSet
     - FDFullscreenPopGesture
+    - Google-Mobile-Ads-SDK
     - GVUserDefaults
     - KVOController
     - LKDBHelper
@@ -89,11 +119,15 @@ SPEC REPOS:
     - FDFullscreenPopGesture
     - FLAnimatedImage
     - FMDB
+    - Google-Mobile-Ads-SDK
+    - GoogleAppMeasurement
+    - GoogleUtilities
     - GVUserDefaults
     - KVOController
     - LKDBHelper
     - Masonry
     - MJRefresh
+    - nanopb
     - NJKWebViewProgress
     - SDWebImage
     - SVProgressHUD
@@ -117,13 +151,17 @@ SPEC CHECKSUMS:
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  Google-Mobile-Ads-SDK: 1e72b4f438d997ab0f2ee62b3a7b0cbcc87c47cb
+  GoogleAppMeasurement: 7f028ea162b72c8f326daec74afc95d94f7a47d6
+  GoogleUtilities: 84df567c76ca84f67b7bb40e769fdd4acc746a10
   GVUserDefaults: 52d48cf8ba578b40a1a76312b196dfc9134ba36a
   KVOController: d72ace34afea42468329623b3379ab3cd1d286b6
   LKDBHelper: 9a276ba51f2e16263d46a9517e16cc9b03472664
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
+  nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   NJKWebViewProgress: f481fd424cb5ecc27eacae11b5397db92fba9a4d
-  QAlone: 4a86c1913117a930529db8166a42e7d249766c1f
+  QAlone: 800e4f23c855c544ca127eda9ba2cec8a7fbe341
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
@@ -133,4 +171,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 0b5111f647026781d1f2e003df3bcc0c43bdf5b9
 
-COCOAPODS: 1.6.2
+COCOAPODS: 1.6.1
