@@ -8,7 +8,6 @@
 
 #import "UIViewController+RewardedAD.h"
 #import <objc/runtime.h>
-#import "YHBsseDBModel.h"
 #import <SVProgressHUD/SVProgressHUD.h>
 
 @interface YHRewardedADTimes : YHBsseDBModel
@@ -57,27 +56,64 @@
 
 @implementation UIViewController (RewardedAD)
 
-
 -(void (^)(void))getReawrdBlock{
     return objc_getAssociatedObject(self, @selector(getReawrdBlock));
 }
-
 -(void)setGetReawrdBlock:(void (^)(void))getReawrdBlock{
     objc_setAssociatedObject(self, @selector(getReawrdBlock), getReawrdBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+-(void (^)(void))adLoadFailBlock{
+    return objc_getAssociatedObject(self, @selector(adLoadFailBlock));
+}
+-(void)setAdLoadFailBlock:(void (^)(void))adLoadFailBlock{
+    objc_setAssociatedObject(self, @selector(adLoadFailBlock), adLoadFailBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
 -(NSInteger)repeatTimes{
     return [objc_getAssociatedObject(self, @selector(repeatTimes)) integerValue];
 }
-
 - (void)setRepeatTimes:(NSInteger)repeatTimes{
     objc_setAssociatedObject(self, @selector(repeatTimes), @(repeatTimes), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+-(BOOL)rewardGet{
+    return [objc_getAssociatedObject(self, @selector(rewardGet)) integerValue];
+}
+- (void)setRewardGet:(BOOL)rewardGet{
+    objc_setAssociatedObject(self, @selector(rewardGet), @(rewardGet), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 
 
 
-- (BOOL)showReardAdByBannerID:(NSString *)bannerID podKey:(NSString *)posKey getReward:(void(^)(void))getReward{
+/**
+ 显示激励广告
+ 
+ @param posKey 位置的ID信息
+ @param needTimes 位置点击次数 符合这些次数的时候 需要显示激励广告 传空 默认 2次
+ @param nextAction 激励广告之后 执行的动作
+ */
+- (BOOL)yh_showReardAdByPosKey:(NSString *)posKey
+                     needTimes:(NSArray <NSString *>*)needTimes
+                      bannerID:(NSString *)bannerID
+                showNextAction:(void(^__nullable)(void))nextAction
+                        reward:(void(^__nullable)(void))reward{
+    
+    if(YHUserSetting.adClose){
+        //广告是关闭的 不需要加载
+        if(nextAction){
+            nextAction();
+        }
+        return YES;
+    }
+    
+    if(!bannerID){
+        if(nextAction){
+            nextAction();
+        }
+        return YES;
+    }
     
     //激励广告
     YHRewardedADTimes * times = [[YHRewardedADTimes getUsingLKDBHelper] searchSingle:[YHRewardedADTimes class] where:@{@"key":posKey} orderBy:nil];
@@ -88,7 +124,11 @@
         [[YHRewardedADTimes getUsingLKDBHelper] insertToDB:times];
     }
     
-    if(times.times == 2){
+    if(!needTimes){
+        needTimes = @[@"2"];
+    }
+    
+    if([needTimes containsObject:@(times.times).stringValue]){
         WS(weakSelf);
         //显示 激励广告
         void(^showRewardAD)(void) = ^(void) {
@@ -96,11 +136,19 @@
             [weakSelf setGetReawrdBlock:^{
                 times.times = times.times + 1;
                 [[YHRewardedADTimes getUsingLKDBHelper] updateToDB:times where:@{@"key":posKey}];
-                if(getReward){
-                    getReward();
+                //得到奖励了
+                if(nextAction){
+                    nextAction();
+                }
+                if(reward){
+                    reward();
                 }
             }];
-//            weakSelf.getReawrdBlock = getReward;
+            [weakSelf setAdLoadFailBlock:^{
+                if(nextAction){
+                    nextAction();
+                }
+            }];
             
             GADRequest *request = [GADRequest request];
 #if DEBUG
@@ -111,12 +159,11 @@
 #if DEBUG
             [[GADRewardBasedVideoAd sharedInstance] loadRequest:request              withAdUnitID:@"ca-app-pub-3940256099942544/1712485313"];
 #else
-            [[GADRewardBasedVideoAd sharedInstance] loadRequest:request
-                                                   withAdUnitID:bannerID];
+            [[GADRewardBasedVideoAd sharedInstance] loadRequest:request              withAdUnitID:bannerID];
             
 #endif
-            
             [SVProgressHUD show];
+            weakSelf.rewardGet = NO;
             weakSelf.repeatTimes = 0;
             [weakSelf readyToPlay];
         };
@@ -135,6 +182,10 @@
     }else{
         times.times = times.times + 1;
         [[YHRewardedADTimes getUsingLKDBHelper] updateToDB:times where:@{@"key":posKey}];
+        if(nextAction){
+            nextAction();
+        }
+        
         return YES;
     }
 }
@@ -152,6 +203,7 @@
         }else{
             [YHHUD showInfoMsg:LS(@"加载失败,请重试")];
             [SVProgressHUD dismiss];
+            self.adLoadFailBlock();
         }
     });
     
@@ -165,57 +217,57 @@
     [NSString stringWithFormat:@"Reward received with currency %@ , amount %lf",
      reward.type,
      [reward.amount doubleValue]];
-    NSLog(@"%@",rewardMessage);
     
-    self.getReawrdBlock();
-    
-    NSLog(@"didRewardUserWithReward");
+    self.rewardGet = YES;
+    NSLog(@"%s ----- message = %@",__func__,rewardMessage);
+    //    self.getReawrdBlock();
 }
 
 /// Tells the delegate that the reward based video ad failed to load.
 - (void)rewardBasedVideoAd:(GADRewardBasedVideoAd *)rewardBasedVideoAd
     didFailToLoadWithError:(NSError *)error{
-    
-    self.repeatTimes = 100;
+    NSLog(@"%s --- %@",__func__,error);
+    self.adLoadFailBlock();
     [SVProgressHUD dismiss];
-    
-    NSLog(@"didFailToLoadWithError %@",error);
 }
 
 /// Tells the delegate that a reward based video ad was received.
 - (void)rewardBasedVideoAdDidReceiveAd:(GADRewardBasedVideoAd *)rewardBasedVideoAd{
-    NSLog(@"rewardBasedVideoAdDidReceiveAd");
+    NSLog(@"%s",__func__);
 }
 
 /// Tells the delegate that the reward based video ad opened.
 - (void)rewardBasedVideoAdDidOpen:(GADRewardBasedVideoAd *)rewardBasedVideoAd{
-    NSLog(@"rewardBasedVideoAdDidOpen");
+    NSLog(@"%s",__func__);
 }
 
 /// Tells the delegate that the reward based video ad started playing.
 - (void)rewardBasedVideoAdDidStartPlaying:(GADRewardBasedVideoAd *)rewardBasedVideoAd{
-    NSLog(@"rewardBasedVideoAdDidStartPlaying");
+    NSLog(@"%s",__func__);
 }
 
 /// Tells the delegate that the reward based video ad completed playing.
 - (void)rewardBasedVideoAdDidCompletePlaying:(GADRewardBasedVideoAd *)rewardBasedVideoAd{
-    NSLog(@"rewardBasedVideoAdDidCompletePlaying");
+    NSLog(@"%s",__func__);
 }
 
 /// Tells the delegate that the reward based video ad closed.
 - (void)rewardBasedVideoAdDidClose:(GADRewardBasedVideoAd *)rewardBasedVideoAd{
-    NSLog(@"rewardBasedVideoAdDidClose");
+    NSLog(@"%s",__func__);
+    if(self.rewardGet){
+        self.getReawrdBlock();
+    }
 }
 
 /// Tells the delegate that the reward based video ad will leave the application.
 - (void)rewardBasedVideoAdWillLeaveApplication:(GADRewardBasedVideoAd *)rewardBasedVideoAd{
-    NSLog(@"rewardBasedVideoAdWillLeaveApplication");
+    NSLog(@"%s",__func__);
 }
 
 /// Tells the delegate that the reward based video ad's metadata changed. Called when an ad loads,
 /// and when a loaded ad's metadata changes.
 - (void)rewardBasedVideoAdMetadataDidChange:(GADRewardBasedVideoAd *)rewardBasedVideoAd{
-    NSLog(@"rewardBasedVideoAdMetadataDidChange");
+    NSLog(@"%s",__func__);
 }
 
 

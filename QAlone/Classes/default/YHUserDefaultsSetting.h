@@ -18,12 +18,7 @@
 /** APP设置 数据相关*/
 @interface YHUserDefaultsSetting : GVUserDefaults
 
-@property (nonatomic, assign) BOOL isWangyeXS;
-@property (nonatomic, assign) BOOL isWangyeXSLocal;
-@property (nonatomic, copy) NSString * wangyeLJ;
-//工具条位置 0底部  1顶部  2自定义 其他不显示
-@property (nonatomic, assign) NSInteger toolbarpos;
-
+@property (assign, nonatomic) BOOL adClose;
 
 - (void)saveObj:(id)obj forKey:(NSString *)key;
 - (id)getObjByKey:(NSString *)key;

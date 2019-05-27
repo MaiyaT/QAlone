@@ -11,8 +11,6 @@
 
 @implementation YHUserDefaultsSetting
 
-@dynamic isWangyeXS,wangyeLJ,toolbarpos,isWangyeXSLocal;
-
 
 #pragma mark - 配置
 

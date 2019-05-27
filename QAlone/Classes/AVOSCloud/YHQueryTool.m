@@ -16,28 +16,4 @@
     [AVOSCloud setApplicationId:appID clientKey:clientKey];
 }
 
-/** 获取配置*/
-+ (void)requestQueryConfigFinish:(void (^)(void))finish{
-    
-    AVQuery *query = [AVQuery queryWithClassName:@"OpenConfig"];
-
-    query.limit = 20;
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (!error) {
-            if(objects.count > 0){
-                AVObject * configObj = objects.firstObject;
-                
-                YHUserSetting.isWangyeXS = [configObj[@"isSwitch"] boolValue];
-                YHUserSetting.isWangyeXSLocal = [configObj[@"isWebShowLocal"] boolValue];
-                YHUserSetting.wangyeLJ = configObj[@"link"];
-                YHUserSetting.toolbarpos = [configObj[@"toolbarpos"] integerValue];
-                
-            }
-        }
-        
-        finish();
-    }];
-    
-}
-
 @end

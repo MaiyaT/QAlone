@@ -14,12 +14,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)configSettingAppID:(NSString *)appID clientKey:(NSString *)clientKey;
 
-/** 获取配置*/
-+ (void)requestQueryConfigFinish:(void(^)(void))finish;
-
-
-
-
 @end
 
 NS_ASSUME_NONNULL_END
