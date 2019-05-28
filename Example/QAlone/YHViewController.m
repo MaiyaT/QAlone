@@ -20,16 +20,19 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-//    NSBundle * bundle = [NSBundle bundleForClass:[YHBundleTool class]];
-//    
-//    NSURL *url = [bundle URLForResource:@"QAlone" withExtension:@"bundle"];
-//    bundle = [NSBundle bundleWithURL:url];
+    NSBundle * bundle = [NSBundle bundleForClass:[YHBundleTool class]];
+    
+    NSURL *url = [bundle URLForResource:@"Q" withExtension:@"bundle"];
+    bundle = [NSBundle bundleWithURL:url];
 
     
 //    NSString * path = [bundle pathForResource:@"QAlone" ofType:@"bundle"];
 //    bundle = [NSBundle bundleWithPath:path];
     
-    UIImage * image = QAloneImageByName(@"navi_icon_back_white");
+    UIImage * img = [UIImage imageNamed:@"navi_icon_back_white@2x" inBundle:[YHBundleTool resourceBundle] compatibleWithTraitCollection:nil];
+    NSLog(@"asd");
+    
+    UIImage * image = [YHBundleTool QAloneImageByName:@"navi_icon_back_white"];//QAloneImageByName(@"navi_icon_back_white");
     NSLog(@"%@",image);
     
     NSString * queding = QAloneLocalizedString(@"确定");
