@@ -9,6 +9,7 @@
 #import "UIViewController+RewardedAD.h"
 #import <objc/runtime.h>
 #import <SVProgressHUD/SVProgressHUD.h>
+#import "YHBundleTool.h"
 
 @interface YHRewardedADTimes : YHBsseDBModel
 
@@ -168,12 +169,12 @@
             [weakSelf readyToPlay];
         };
         
-        UIAlertController * alertController = [UIAlertController alertControllerWithTitle:LS(@"\n需要观看视频才能继续使用\n\n") message:nil preferredStyle: UIAlertControllerStyleAlert];
+        UIAlertController * alertController = [UIAlertController alertControllerWithTitle:QAloneLocalizedString(@"\n需要观看视频才能继续使用\n\n") message:nil preferredStyle: UIAlertControllerStyleAlert];
         
-        [alertController addAction:[UIAlertAction actionWithTitle:LS(@"观看") style:UIAlertActionStyleDestructive handler:^(UIAlertAction * action) {
+        [alertController addAction:[UIAlertAction actionWithTitle:QAloneLocalizedString(@"观看") style:UIAlertActionStyleDestructive handler:^(UIAlertAction * action) {
             showRewardAD();
         }]];
-        [alertController addAction:[UIAlertAction actionWithTitle:LS(@"取消") style:UIAlertActionStyleCancel handler:^(UIAlertAction * action) {
+        [alertController addAction:[UIAlertAction actionWithTitle:QAloneLocalizedString(@"取消") style:UIAlertActionStyleCancel handler:^(UIAlertAction * action) {
             
         }]];
         [self presentViewController:alertController animated:YES completion:nil];
@@ -201,7 +202,7 @@
             self.repeatTimes = self.repeatTimes + 1;
             [self readyToPlay];
         }else{
-            [YHHUD showInfoMsg:LS(@"加载失败,请重试")];
+            [YHHUD showInfoMsg:QAloneLocalizedString(@"加载失败,请重试")];
             [SVProgressHUD dismiss];
             self.adLoadFailBlock();
         }

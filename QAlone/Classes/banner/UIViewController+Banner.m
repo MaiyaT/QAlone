@@ -35,6 +35,11 @@
 #endif
     [bannerView loadRequest:request];
     
+    [bannerView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.bottom.equalTo(self.view);
+        make.height.mas_equalTo(kGADAdSizeBanner.size.height);
+    }];
+    
     return bannerView;
 }
 

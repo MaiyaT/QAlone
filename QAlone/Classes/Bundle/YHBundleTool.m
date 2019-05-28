@@ -19,12 +19,5 @@
     return bundle;
 }
 
-+ (NSString *)QAloneLocalizedString:(NSString *)key{
-    return NSLocalizedStringFromTableInBundle(key, @"Localizable", [YHBundleTool resourceBundle], nil);
-}
-
-+ (UIImage *)QAloneImageByName:(NSString *)key{
-    return [UIImage imageNamed:key inBundle:[YHBundleTool resourceBundle] compatibleWithTraitCollection:nil];
-}
 
 @end

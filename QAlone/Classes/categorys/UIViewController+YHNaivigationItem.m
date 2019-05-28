@@ -24,10 +24,10 @@
     UIImage * imageSelect = [UIImage imageNamed:imgPathSelect];
 
     if(!imageNormal){
-        imageNormal = [YHBundleTool QAloneImageByName:imgPath];
+        imageNormal = QAloneImageByName(imgPath);
     }
     if(!imageSelect){
-        imageSelect = [YHBundleTool QAloneImageByName:imgPathSelect];
+        imageSelect = QAloneImageByName(imgPathSelect);
     }
     
     UIButton *leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -92,10 +92,10 @@
     UIImage * imageSelect = [UIImage imageNamed:imgPathSelect];
 
     if(!imageNormal){
-        imageNormal = [YHBundleTool QAloneImageByName:imgPath];
+        imageNormal = QAloneImageByName(imgPath);
     }
     if(!imageSelect){
-        imageSelect = [YHBundleTool QAloneImageByName:imgPathSelect];
+        imageSelect = QAloneImageByName(imgPathSelect);
     }
     
     UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeCustom];

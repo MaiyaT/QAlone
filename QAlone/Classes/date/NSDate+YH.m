@@ -44,7 +44,7 @@
     if(formate){
         dateFormater.dateFormat = formate;
     }else{
-        dateFormater.dateFormat = [YHBundleTool QAloneLocalizedString:@"yyyy年MM月dd日 HH时mm分ss秒"];
+        dateFormater.dateFormat = QAloneLocalizedString(@"yyyy年MM月dd日 HH时mm分ss秒");
     }
     return [dateFormater stringFromDate:self];
 }
@@ -54,11 +54,11 @@
  */
 - (NSString *)yh_desYMDW{
     NSMutableString * str = [[NSMutableString alloc] init];
-    [str appendFormat:[YHBundleTool QAloneLocalizedString:@"%ld年"],self.year];
-    [str appendFormat:[YHBundleTool QAloneLocalizedString:@"%ld月"],self.month];
-    [str appendFormat:[YHBundleTool QAloneLocalizedString:@"%ld日 "],self.day];
-    NSArray * listWeeak = @[[YHBundleTool QAloneLocalizedString:@"天"],[YHBundleTool QAloneLocalizedString:@"一"],[YHBundleTool QAloneLocalizedString:@"二"],[YHBundleTool QAloneLocalizedString:@"三"],[YHBundleTool QAloneLocalizedString:@"四"],[YHBundleTool QAloneLocalizedString:@"五"],[YHBundleTool QAloneLocalizedString:@"六"]];
-    [str appendFormat:[YHBundleTool QAloneLocalizedString:@"星期%@"],listWeeak[self.weekday-1]];
+    [str appendFormat:QAloneLocalizedString(@"%ld年"),self.year];
+    [str appendFormat:QAloneLocalizedString(@"%ld月"),self.month];
+    [str appendFormat:QAloneLocalizedString(@"%ld日 "),self.day];
+    NSArray * listWeeak = @[QAloneLocalizedString(@"天"),QAloneLocalizedString(@"一"),QAloneLocalizedString(@"二"),QAloneLocalizedString(@"三"),QAloneLocalizedString(@"四"),QAloneLocalizedString(@"五"),QAloneLocalizedString(@"六")];
+    [str appendFormat:QAloneLocalizedString(@"星期%@"),listWeeak[self.weekday-1]];
     return str;
 }
 
@@ -76,37 +76,37 @@
     switch (weekday) {
         case 1:
         {
-            return [YHBundleTool QAloneLocalizedString:@"星期天"];
+            return QAloneLocalizedString(@"星期天");
         }
             break;
         case 2:
         {
-            return [YHBundleTool QAloneLocalizedString:@"星期一"];
+            return QAloneLocalizedString(@"星期一");
         }
             break;
         case 3:
         {
-            return [YHBundleTool QAloneLocalizedString:@"星期二"];
+            return QAloneLocalizedString(@"星期二");
         }
             break;
         case 4:
         {
-            return [YHBundleTool QAloneLocalizedString:@"星期三"];
+            return QAloneLocalizedString(@"星期三");
         }
             break;
         case 5:
         {
-            return [YHBundleTool QAloneLocalizedString:@"星期四"];
+            return QAloneLocalizedString(@"星期四");
         }
             break;
         case 6:
         {
-            return [YHBundleTool QAloneLocalizedString:@"星期五"];
+            return QAloneLocalizedString(@"星期五");
         }
             break;
         case 7:
         {
-            return [YHBundleTool QAloneLocalizedString:@"星期六"];
+            return QAloneLocalizedString(@"星期六");
         }
             break;
             

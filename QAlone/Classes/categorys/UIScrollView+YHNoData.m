@@ -25,7 +25,7 @@
     delegate.titleFont = [UIFont yh_pfOfSize:15];
     
     delegate.imageUrlString = @"nodata_n";
-    delegate.title = [YHBundleTool QAloneLocalizedString:@"暂时还没有数据哦~"];
+    delegate.title = QAloneLocalizedString(@"暂时还没有数据哦~");
     
     if(configBlock){
         configBlock(delegate);
@@ -55,7 +55,7 @@
     	[hutujiz_date_slide_clear_value setObject:@(hutujiz_fade) forKey:@"hutujiz_fade"];
     }
 
-    delegate.title = [YHBundleTool QAloneLocalizedString:@"暂时还没有数据哦~"];;
+    delegate.title = QAloneLocalizedString(@"暂时还没有数据哦~");
     
     delegate.buttonColor = [UIColor whiteColor];
     {

@@ -94,7 +94,7 @@
 #define KDelegate (UIApplication.sharedApplication.delegate)
 
 
-#define LS(s)     NSLocalizedString(s, nil)
+#define QAloneLocalizedString(s)     NSLocalizedString(s, nil)
 
 #define  YHNetWorkChangeEventNotification   @"YHNetWorkChangeEventNotification"
 

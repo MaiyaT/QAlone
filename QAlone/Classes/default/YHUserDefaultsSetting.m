@@ -11,6 +11,7 @@
 
 @implementation YHUserDefaultsSetting
 
+@dynamic adClose;
 
 #pragma mark - 配置
 

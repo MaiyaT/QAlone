@@ -29,10 +29,10 @@
 //    NSString * path = [bundle pathForResource:@"QAlone" ofType:@"bundle"];
 //    bundle = [NSBundle bundleWithPath:path];
     
-    UIImage * image = [YHBundleTool QAloneImageByName:@"navi_icon_back_white"];
+    UIImage * image = QAloneImageByName(@"navi_icon_back_white");
     NSLog(@"%@",image);
     
-    NSString * queding = [YHBundleTool QAloneLocalizedString:@"确定"];
+    NSString * queding = QAloneLocalizedString(@"确定");
     NSLog(@"%@",queding);
 }
 

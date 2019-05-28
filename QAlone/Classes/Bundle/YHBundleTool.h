@@ -7,18 +7,15 @@
 
 #import <Foundation/Foundation.h>
 
+#define QAloneLocalizedString(key) (NSLocalizedStringFromTableInBundle(key, @"Localizable", [YHBundleTool resourceBundle], nil))
+#define QAloneImageByName(key) ([UIImage imageNamed:key inBundle:[YHBundleTool resourceBundle] compatibleWithTraitCollection:nil])
+
+
 NS_ASSUME_NONNULL_BEGIN
-
-
 
 @interface YHBundleTool : NSObject
 
 + (NSBundle *)resourceBundle;
-
-+ (NSString *)QAloneLocalizedString:(NSString *)key;
-
-
-+ (UIImage *)QAloneImageByName:(NSString *)key;
 
 @end
 
