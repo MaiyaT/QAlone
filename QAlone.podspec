@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'QAlone'
-  s.version          = '0.5.0'
+  s.version          = '0.5.1'
   s.summary          = 'q shell common'
 
 # This description is used to generate tags and improve search results.

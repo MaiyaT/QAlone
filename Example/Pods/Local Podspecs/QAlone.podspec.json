@@ -1,6 +1,6 @@
 {
   "name": "QAlone",
-  "version": "0.4.9",
+  "version": "0.5.0",
   "summary": "q shell common",
   "description": "yh q shell common",
   "homepage": "https://github.com/MaiyaT/QAlone",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/MaiyaT/QAlone.git",
-    "tag": "0.4.9"
+    "tag": "0.5.0"
   },
   "platforms": {
     "ios": "9.0"
