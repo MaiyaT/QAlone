@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'QAlone'
-  s.version          = '0.5.1'
+  s.version          = '0.5.2'
   s.summary          = 'q shell common'
 
 # This description is used to generate tags and improve search results.
@@ -40,7 +40,6 @@ Pod::Spec.new do |s|
   
   s.prefix_header_contents = '#import "QAlone.h"','#import "YHBundleTool.h"'
   
-  s.dependency 'AFNetworking', '~> 2.3'
   s.dependency 'GVUserDefaults'
   s.dependency 'YYKit'
   s.dependency 'LKDBHelper'
@@ -62,10 +61,6 @@ Pod::Spec.new do |s|
   s.dependency 'SDWebImage/GIF'
     
   s.dependency 'AVOSCloud'
-  s.dependency 'AXPracticalHUD'
-  s.dependency 'AXNavigationBackItemInjection'
-  s.dependency 'NJKWebViewProgress'
-  s.dependency 'Aspects'
   
   s.dependency 'Google-Mobile-Ads-SDK'
   

@@ -192,7 +192,9 @@
 }
 
 - (void)readyToPlay{
-    
+    if(self.repeatTimes >= 1000){
+        return;
+    }
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         
         if ([[GADRewardBasedVideoAd sharedInstance] isReady]) {
@@ -230,6 +232,8 @@
     NSLog(@"%s --- %@",__func__,error);
     self.adLoadFailBlock();
     [SVProgressHUD dismiss];
+    
+    self.repeatTimes = 1000;
 }
 
 /// Tells the delegate that a reward based video ad was received.

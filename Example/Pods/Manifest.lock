@@ -14,12 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
-  - Aspects (1.4.1)
   - AVOSCloud (11.6.3)
-  - AXIndicatorView (0.1.1)
-  - AXNavigationBackItemInjection (0.0.2)
-  - AXPracticalHUD (2.1.4):
-    - AXIndicatorView
   - DZNEmptyDataSet (1.8.1)
   - FDFullscreenPopGesture (1.1)
   - FLAnimatedImage (1.0.12)
@@ -63,17 +58,9 @@ PODS:
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
-  - NJKWebViewProgress (0.2.3):
-    - NJKWebViewProgress/Core (= 0.2.3)
-    - NJKWebViewProgress/ProgressView (= 0.2.3)
-  - NJKWebViewProgress/Core (0.2.3)
-  - NJKWebViewProgress/ProgressView (0.2.3)
-  - QAlone (0.5.0):
+  - QAlone (0.5.1):
     - AFNetworking
-    - Aspects
     - AVOSCloud
-    - AXNavigationBackItemInjection
-    - AXPracticalHUD
     - DZNEmptyDataSet
     - FDFullscreenPopGesture
     - Google-Mobile-Ads-SDK
@@ -82,7 +69,6 @@ PODS:
     - LKDBHelper
     - Masonry
     - MJRefresh
-    - NJKWebViewProgress
     - SDWebImage (~> 4.0.0)
     - SDWebImage/GIF
     - SVProgressHUD
@@ -110,11 +96,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
-    - Aspects
     - AVOSCloud
-    - AXIndicatorView
-    - AXNavigationBackItemInjection
-    - AXPracticalHUD
     - DZNEmptyDataSet
     - FDFullscreenPopGesture
     - FLAnimatedImage
@@ -128,7 +110,6 @@ SPEC REPOS:
     - Masonry
     - MJRefresh
     - nanopb
-    - NJKWebViewProgress
     - SDWebImage
     - SVProgressHUD
     - Toast
@@ -142,11 +123,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
   AVOSCloud: 3148cbb1d05be4e479cffa206f147ef09a470fdf
-  AXIndicatorView: 566b490a2dd9781d4ffbcc9752be9b9cdc6e728e
-  AXNavigationBackItemInjection: efe0446967f3cbcc85a9118decd1e145138912dd
-  AXPracticalHUD: 821d170b31e050c426ef8754b07b4264a8b1d861
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
@@ -160,8 +137,7 @@ SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
-  NJKWebViewProgress: f481fd424cb5ecc27eacae11b5397db92fba9a4d
-  QAlone: ffd692bf43d620afeee86a6b67ecabf5b0df671e
+  QAlone: 3b1f4a0fbc5a183da5f3eaef88e2c2e36310c913
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196

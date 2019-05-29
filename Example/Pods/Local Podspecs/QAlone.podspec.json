@@ -1,6 +1,6 @@
 {
   "name": "QAlone",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "summary": "q shell common",
   "description": "yh q shell common",
   "homepage": "https://github.com/MaiyaT/QAlone",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/MaiyaT/QAlone.git",
-    "tag": "0.5.0"
+    "tag": "0.5.1"
   },
   "platforms": {
     "ios": "9.0"
@@ -30,9 +30,6 @@
     "#import \"YHBundleTool.h\""
   ],
   "dependencies": {
-    "AFNetworking": [
-
-    ],
     "GVUserDefaults": [
 
     ],
@@ -43,6 +40,9 @@
 
     ],
     "TZImagePickerController": [
+
+    ],
+    "AFNetworking": [
 
     ],
     "Masonry": [
@@ -76,18 +76,6 @@
 
     ],
     "AVOSCloud": [
-
-    ],
-    "AXPracticalHUD": [
-
-    ],
-    "AXNavigationBackItemInjection": [
-
-    ],
-    "NJKWebViewProgress": [
-
-    ],
-    "Aspects": [
 
     ],
     "Google-Mobile-Ads-SDK": [
