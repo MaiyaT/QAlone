@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'QAlone'
-  s.version          = '0.5.2'
+  s.version          = '0.5.3'
   s.summary          = 'q shell common'
 
 # This description is used to generate tags and improve search results.
@@ -45,8 +45,7 @@ Pod::Spec.new do |s|
   s.dependency 'LKDBHelper'
     
   s.dependency 'TZImagePickerController'
-  s.dependency 'AFNetworking'
-    
+  
   s.dependency 'Masonry'
   s.dependency 'SVProgressHUD'
   s.dependency 'Toast'
@@ -59,8 +58,6 @@ Pod::Spec.new do |s|
     
   s.dependency 'SDWebImage', '~> 4.0.0'
   s.dependency 'SDWebImage/GIF'
-    
-  s.dependency 'AVOSCloud'
   
   s.dependency 'Google-Mobile-Ads-SDK'
   

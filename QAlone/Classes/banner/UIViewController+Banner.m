@@ -19,6 +19,10 @@
         }
     }
     
+    if(YHUserSetting.adClose){
+        return nil;
+    }
+    
     GADBannerView * bannerView = [[GADBannerView alloc]
                    initWithAdSize:kGADAdSizeBanner];
     bannerView.translatesAutoresizingMaskIntoConstraints = NO;

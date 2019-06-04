@@ -7,7 +7,6 @@
 //
 
 #import "YHAppDelegate.h"
-#import <AVOSCloud/AVOSCloud.h>
 
 @implementation YHAppDelegate
 
@@ -37,7 +36,7 @@
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 {
-    [AVOSCloud handleRemoteNotificationsWithDeviceToken:deviceToken];
+//    [AVOSCloud handleRemoteNotificationsWithDeviceToken:deviceToken];
 }
 
 -(void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
